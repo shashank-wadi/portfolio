@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background: rgba(192, 225, 236, 0.5); /* Optional background color */
+}
+
+#paragraph {
+    background-color: rgb(246, 249, 214);
+    width: 90%; /* Width for mobile screens */
+    max-width: 800px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the paragraph */
+    padding: 10px; /* Add padding for better appearance */
+}
+
+.education-container {
+    display: flex; /* Use flexbox to arrange tables */
+    flex-wrap: nowrap; /* Keep tables in a single row on larger screens */
+    justify-content: space-between; /* Distribute space between tables */
+}
+
+.education-table {
+    flex: 1; /* Allow equal width for all tables */
+    margin: 10px; /* Add margin around tables */
+    min-width: 250px; /* Minimum width for responsiveness */
+}
+
+table {
+    width: 100%; /* Ensure tables take full width */
+}
+
+td {
+    text-align: center;
+    padding: 10px; /* Padding for better visibility */
+}
+
+/* Styles for mobile screens */
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column; /* Stack tables vertically */
+    }
+
+    .education-table {
+        flex: 1 1 auto; /* Allow full width on mobile */
+    }
+
+    .progress-container1,
+    .progress-container2,
+    .progress-container3 {
+        width: 40px; /* Smaller progress bar size for mobile */
+        height: 40px; /* Smaller progress bar size for mobile */
+    }
+
+    .percentage1,
+    .percentage2,
+    .percentage3 {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    td {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+.progress-container1, .progress-container2, .progress-container3 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.progress-bar1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        lightgreen 0% 66.5%, /* Progress percentage */
+        lightpink 0% 100% /* Remaining percentage */
+    );
+    transform: rotate(90deg); /* Start the progress from the top */
+}
+
+.percentage1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0d0d0d; /* Text color */
+    font-size: 15px;
+}
+
+.progress-bar2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        lightgreen 0% 75%, /* Progress percentage */
+        lightpink 0% 100% /* Remaining percentage */
+    );
+    transform: rotate(90deg); /* Start the progress from the top */
+}
+
+.percentage2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0d0d0d; /* Text color */
+    font-size: 15px;
+}
+
+.progress-bar3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        lightgreen 0% 75%, /* Progress percentage */
+        lightpink 0% 100% /* Remaining percentage */
+    );
+    transform: rotate(90deg); /* Start the progress from the top */
+}
+
+.percentage3 {
+    position: absolute;
+    top: 5
+}
